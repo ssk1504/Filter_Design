@@ -14,11 +14,16 @@ int main() {
     // Initialize an array to store the poles
     double complex poles[2*N];
 
-    // Calculate and store the poles
+    // Calculate and store the poles for the left-half of the complex plane
     for (int i = 0; i < N; ++i) {
         double angle = PI * (2 * i + 1) / (2 * N);
         poles[i] = -sinh(B_k) * sin(angle) + I * cosh(B_k) * cos(angle);
         poles[2*N - 1 - i] = conj(poles[i]);
+    }
+
+    // Calculate and store the poles for the right-half of the complex plane
+    for (int i = 0; i < N; ++i) {
+        poles[N + i] = -poles[i];
     }
 
     // Save poles to a .dat file
@@ -37,4 +42,3 @@ int main() {
 
     return 0;
 }
-

@@ -201,10 +201,10 @@ We know that from \eqref{eq:mag_freq_response}:-
 \begin{align}
     \abs{ H_{a,LP}(s_L)} &= \frac{1}{\sqrt{1+\epsilon^2}} \text{at} \hspace{5pt} \Omega_{L}=1 \implies s_{L} = j \label{eq:Gain_eq_LP} 
 \end{align}
-Substituting respective values in \eqref{eq:Gain_eq_LP} we get $G_{LP}=0.3125$
+Substituting respective values in \eqref{eq:Gain_eq_LP} we get $G_{LP}=0.2499$
 \begin{align}
-     H_{a,LP}(s_L) &= \frac{0.3125}{\brak{s_L-s_5}\brak{s_L-s_6}\brak{s_L-s_7}\brak{s_L-s_8}}\\
-     &= \frac{0.3125}{s_L^4 + 1.1068s_L^3 + 1.6125s_L^2+0.9140s_L + 0.3366}\label{eq:design}
+     H_{a,LP}(s_L) &= \frac{0.2499}{\brak{s_L-s_5}\brak{s_L-s_6}\brak{s_L-s_7}\brak{s_L-s_8}}\\
+     &= \frac{0.2499}{s_L^4 + 0.9636s_L^3 + 1.4642s_L^2+0.7539s_L + 0.2795}\label{eq:design}
 \end{align}
 \begin{figure}[H]
 \centering
@@ -232,11 +232,11 @@ As there is one to one correspondence between the filters so $\Omega=\Omega_{p1}
 \end{align}
 Substituting \eqref{eq:res1} in \eqref{eq:res2} we obtain Gain of required bass pass filter:
 \begin{align}
-    G_{BP} &= 0.89466 
+    G_{BP} &= 1.1187
 \end{align}
 Thus the response in s domain 
 \begin{align}
-   H_{a,BP}(s) = \frac{8.7661\times 10^{-5}s^4}{s^8 + 0.1473s^7 + 2.7921s^6 + 0.3075s^5 + 2.9035s^4 + 0.2124s^3 + 1.3327s^2 + 0.0485s + 0.2278}\label{eq:magnitude_bandpass_sdom}
+   H_{a,BP}(s) = \frac{2.9195\times 10^{-5}s^4}{s^8 + 0.1282s^7 + 2.7895s^6 + 0.2676s^5 + 2.8990s^4 + 0.1848s^3 + 1.3315s^2 + 0.0422s + 0.2278}\label{eq:magnitude_bandpass_sdom}
 \end{align}
 The expressions in the s-domain and gain factors are computed by writing a Python code. \\
 In Figure 3, we plot $\vert H_{a,BP}(j\Omega)\vert$ as a function of $\Omega$ for both positve as
@@ -266,6 +266,12 @@ Substituting $s=\frac{1-z^{-1}}{1+z^{-1}}$ in \eqref{eq:magnitude_bandpass_sdom}
 \end{align}
 
 where $G=8.7661\times 10^{-5}$    
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{figs/Digital_BPF.png}
+    \caption{Digital Band Pass filter obtained from equation 45}
+\end{figure}
 
 \section{The FIR Filter}
 We design the FIR filter by first obtaining the (non-causal) lowpass equivalent using the Kaiser window
@@ -386,5 +392,6 @@ https://github.com/ssk1504/Filter_Design/blob/main/codes/plot5.py
 
 
 \end{document}
+
 
 

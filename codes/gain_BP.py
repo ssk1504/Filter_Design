@@ -14,7 +14,7 @@ den = np.poly([s1, s2, s3, s4])
 # Define frequency range
 w = np.arange(-2, 2.01, 0.01)
 
-num = 0.3125
+num = 0.2499
 
 # Define parameters for transformation
 B = 0.1331

@@ -15,7 +15,7 @@ den = np.poly([s1, s2, s3, s4])
 # Define frequency range
 w = np.arange(-2, 2.01, 0.01)
 
-G_LP = 0.3125
+G_LP = 0.2499
 num = G_LP
 
 Omega_p1 = 0.7673
@@ -33,7 +33,7 @@ s_L = (1j * w)**2 + Omega0**2
 s_L = s_L / (B * (1j * w))
 
 # Band pass gain
-G_bp = 0.89466
+G_bp = 1.1187
 
 # Substitute s = jw into H(s)
 H = G_bp * (num / np.polyval(den, s_L))

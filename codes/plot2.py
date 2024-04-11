@@ -31,7 +31,7 @@ Ha_values = 1 / np.sqrt(1 + epsilon**2 * c_N_interpolated**2)
 plt.figure()
 plt.plot(w, Ha_values, '*', label='Design')
 
-G_LP = 0.25
+G_LP = 0.2499
 num = G_LP
 
 # Calculate magnitude response for epsilon = 0.5
