@@ -269,9 +269,15 @@ where $G=8.7661\times 10^{-5}$
 
 \begin{figure}[H]
     \centering
-    \includegraphics{figs/Digital_BPF.png}
+    \includegraphics[width=.9\linewidth]{figs/Digital_BPF.png}
     \caption{Digital Band Pass filter obtained from equation 45}
 \end{figure}
+
+
+\begin{lstlisting}
+https://github.com/ssk1504/Filter_Design/blob/main/codes/H_dbp.py
+\end{lstlisting}
+
 
 \section{The FIR Filter}
 We design the FIR filter by first obtaining the (non-causal) lowpass equivalent using the Kaiser window
@@ -290,6 +296,7 @@ The stopband tolerance is $\delta=0.15$.The cutoff-frequency is given by :
 \caption{Frequency response and impulse response of an ideal Low Pass Filter}
 \label{fig:LPF_FIR_1}
 \end{figure}
+
 
 \begin{lstlisting}
 https://github.com/ssk1504/Filter_Design/blob/main/codes/FIR_1.py
