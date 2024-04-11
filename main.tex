@@ -291,6 +291,10 @@ The stopband tolerance is $\delta=0.15$.The cutoff-frequency is given by :
 \label{fig:LPF_FIR_1}
 \end{figure}
 
+\begin{lstlisting}
+https://github.com/ssk1504/Filter_Design/blob/main/codes/FIR_1.py
+\end{lstlisting}
+
 The impulse response of ideal Low Pass Filter is given by :
 \begin{align}
     h\brak{n} = 
@@ -344,7 +348,7 @@ Therefore the desired impulse response is :
 \begin{cases} 
     \frac{\sin(w_l n)}{n\pi},  & \text{for } -48\leq n \leq 48 \\
     0 &\text{otherwise}
-\end{cases} \label{eq:h(n)desired_for_LPF}
+\end{cases} 
 \end{align}
 \end{enumerate}
 \begin{figure}[H]
@@ -365,7 +369,7 @@ A Band-Pass Filter (BPF) can be obtained by subtracting the magnitude response o
 \begin{cases} 
     \frac{\sin(w_{p2} n)}{n\pi} -\frac{\sin\brak{\omega_{p1}n}}{n\pi},  & \text{for } n\neq 0\\\
     \frac{\omega_{p2}-\omega_{p1}}{\pi} &\text{for} n= 0
-\end{cases} \label{eq:h(n)desired_for_LPF}
+\end{cases} 
 \end{align}
 \begin{align}
      \frac{\sin(\omega_{p2} n)}{n\pi} -\frac{\sin\brak{\omega_{p1}n}}{n\pi} &= \frac{2\cos{\brak{\frac{\omega_{p2}n+\omega_{p1}n}{2}}}\sin{\brak{\frac{\omega_{p2}n-\omega_{p1}n}{2}}}}{n\pi}\\
@@ -377,7 +381,7 @@ Multipying by window function we get :
 \begin{cases} 
    \frac{2\cos{\brak{0.2225n\pi}}\sin{\brak{0.025n\pi}}}{n\pi},  & \text{for } -48\leq n \leq 48 \\
     0 &\text{otherwise}
-\end{cases} \label{eq:h(n)desired_for_BPF}
+\end{cases} 
 \end{align}
 
 \begin{figure}[H]
