@@ -282,7 +282,7 @@ The lowpass filter has a passband frequency $\omega_l$ and transition band $\Del
 The stopband tolerance is $\delta=0.15$.The cutoff-frequency is given by :
 \begin{align}
     \omega_{l} &= \frac{B}{2}\\
-                &= 0.025\pi
+                &= 0.066\pi
 \end{align}
 \begin{figure}[H]
 \centering
@@ -373,13 +373,13 @@ A Band-Pass Filter (BPF) can be obtained by subtracting the magnitude response o
 \end{align}
 \begin{align}
      \frac{\sin(\omega_{p2} n)}{n\pi} -\frac{\sin\brak{\omega_{p1}n}}{n\pi} &= \frac{2\cos{\brak{\frac{\omega_{p2}n+\omega_{p1}n}{2}}}\sin{\brak{\frac{\omega_{p2}n-\omega_{p1}n}{2}}}}{n\pi}\\
-            &= \frac{2\cos{\brak{0.2225n\pi}}\sin{\brak{0.025n\pi}}}{n\pi}
+            &= \frac{2\cos{\brak{0.435n\pi}}\sin{\brak{0.025n\pi}}}{n\pi}
 \end{align}
 Multipying by window function we get :
 \begin{align}
     h_{BP}\brak{n} = 
 \begin{cases} 
-   \frac{2\cos{\brak{0.2225n\pi}}\sin{\brak{0.025n\pi}}}{n\pi},  & \text{for } -48\leq n \leq 48 \\
+   \frac{2\cos{\brak{0.435n\pi}}\sin{\brak{0.025n\pi}}}{n\pi},  & \text{for } -48\leq n \leq 48 \\
     0 &\text{otherwise}
 \end{cases} 
 \end{align}
@@ -396,6 +396,4 @@ https://github.com/ssk1504/Filter_Design/blob/main/codes/plot5.py
 
 
 \end{document}
-
-
 
